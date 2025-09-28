@@ -10,22 +10,21 @@ export function FeaturedCar() {
   return (
     <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border hover:border-gold-500/50 transition-all duration-300 championship-glow">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-white racing-subtitle">FEATURED CAR</h2>
+        <h2 className="text-xl font-bold racing-subtitle">FEATURED CAR</h2>
         <div className="flex items-center space-x-1">
           <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
           <span className="text-xs text-gray-400 racing-subtitle">CHAMPION</span>
         </div>
       </div>
 
-      {/* Car Image Placeholder */}
+      {/* Featured Car Image */}
       <div className="relative aspect-[4/3] rounded-xl overflow-hidden mb-6 group">
-        <div className="absolute inset-0 bg-gradient-to-br from-yellow-900 via-gray-900 to-black flex items-center justify-center">
-          <div className="text-center text-white">
-            <div className="text-4xl mb-2">🏆</div>
-            <div className="text-lg font-bold">{featuredCar.name}</div>
-            <div className="text-sm text-gray-300">{featuredCar.year}</div>
-          </div>
-        </div>
+        <img
+          src="/generated/featured_car.jpg"
+          alt={featuredCar.name}
+          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-gold-600/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
@@ -39,7 +38,7 @@ export function FeaturedCar() {
       {/* Car Details */}
       <div className="space-y-4">
         <div>
-          <h3 className="text-lg font-bold text-white racing-title mb-1">{featuredCar.name}</h3>
+          <h3 className="text-lg font-bold racing-title mb-1">{featuredCar.name}</h3>
           <p className="text-sm text-gray-400">{featuredCar.manufacturer} • {featuredCar.category}</p>
         </div>
 

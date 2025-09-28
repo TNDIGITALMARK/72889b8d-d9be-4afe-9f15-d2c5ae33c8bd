@@ -16,14 +16,13 @@ export default function LegendsOfSpeed() {
             <div className="w-8 h-8 racing-red-gradient rounded-sm flex items-center justify-center">
               <span className="text-white font-bold">V</span>
             </div>
-            <span className="text-xl font-bold text-white racing-title">VELOCITY RACING</span>
+            <span className="text-xl font-bold racing-title">VELOCITY RACING</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/cars" className="text-white hover:text-red-400 transition-colors racing-subtitle text-sm">CARS</a>
-            <a href="/races" className="text-white hover:text-red-400 transition-colors racing-subtitle text-sm">RACES</a>
-            <a href="/news" className="text-white hover:text-red-400 transition-colors racing-subtitle text-sm">NEWS</a>
-            <a href="/news" className="text-white hover:text-red-400 transition-colors racing-subtitle text-sm">NEWS</a>
-            <a href="/gallery" className="text-white hover:text-red-400 transition-colors racing-subtitle text-sm">GALLERY</a>
+            <a href="/cars" className="racing-subtitle text-sm hover:opacity-75 transition-opacity">CARS</a>
+            <a href="/races" className="racing-subtitle text-sm hover:opacity-75 transition-opacity">RACES</a>
+            <a href="/news" className="racing-subtitle text-sm hover:opacity-75 transition-opacity">NEWS</a>
+            <a href="/gallery" className="racing-subtitle text-sm hover:opacity-75 transition-opacity">GALLERY</a>
           </div>
         </div>
       </nav>
@@ -50,7 +49,7 @@ export default function LegendsOfSpeed() {
             <div className="w-6 h-6 racing-red-gradient rounded-sm flex items-center justify-center">
               <span className="text-white font-bold text-sm">V</span>
             </div>
-            <span className="text-lg font-bold text-white">VELOCITY RACING</span>
+            <span className="text-lg font-bold racing-title">VELOCITY RACING</span>
           </div>
           <div className="flex items-center space-x-6 text-sm text-gray-400">
             <a href="/privacy" className="hover:text-white transition-colors">PRIVACY POLICY</a>

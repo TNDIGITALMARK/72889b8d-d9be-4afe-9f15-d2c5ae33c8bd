@@ -49,7 +49,7 @@ const upcomingRaces: Race[] = [
 export function UpcomingRaces() {
   return (
     <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border hover:border-red-500/50 transition-all duration-300">
-      <h2 className="text-xl font-bold text-white mb-6 racing-subtitle">UPCOMING RACES</h2>
+      <h2 className="text-xl font-bold mb-6 racing-subtitle">UPCOMING RACES</h2>
 
       <div className="space-y-4">
         {upcomingRaces.map((race, index) => (
@@ -60,7 +60,7 @@ export function UpcomingRaces() {
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center space-x-3">
                 <div className="w-3 h-3 rounded-full racing-red-gradient"></div>
-                <span className="text-sm font-bold text-white racing-subtitle">{race.name}</span>
+                <span className="text-sm font-bold racing-subtitle">{race.name}</span>
               </div>
               <span className="text-xs text-gray-500 bg-gray-800/50 px-2 py-1 rounded racing-subtitle">
                 {race.category}

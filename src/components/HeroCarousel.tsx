@@ -34,10 +34,10 @@ export function HeroCarousel() {
           {/* Text Content */}
           <div className="space-y-8 speed-slide">
             <div className="space-y-4">
-              <h1 className="text-5xl md:text-7xl font-black text-white racing-title">
+              <h1 className="text-5xl md:text-7xl font-black racing-title">
                 UNLEASH YOUR
                 <br />
-                <span className="racing-red-gradient bg-clip-text text-transparent">
+                <span className="racing-title-red">
                   POTENTIAL
                 </span>
               </h1>
@@ -55,15 +55,22 @@ export function HeroCarousel() {
           {/* Car Showcase */}
           <div className="relative">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-              {/* Placeholder for car image - using gradient for now */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900 via-gray-900 to-black flex items-center justify-center">
-                <div className="text-center text-white p-8">
-                  <div className="text-6xl mb-4">🏎️</div>
-                  <h3 className="text-2xl font-bold mb-2">{currentCar.name}</h3>
-                  <p className="text-lg text-gray-300">{currentCar.year} • {currentCar.manufacturer}</p>
-                  <div className="mt-4 flex justify-center space-x-4 text-sm">
-                    <span className="bg-red-600 px-3 py-1 rounded">{currentCar.power}HP</span>
-                    <span className="bg-yellow-600 px-3 py-1 rounded">{currentCar.topSpeed}km/h</span>
+              {/* Real car images */}
+              <div className="absolute inset-0">
+                <img
+                  src={`/generated/hero_car_${currentSlide + 1}.jpg`}
+                  alt={currentCar.name}
+                  className="w-full h-full object-cover"
+                />
+                {/* Overlay for car details */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end justify-center">
+                  <div className="text-center text-white p-8">
+                    <h3 className="text-2xl font-bold mb-2">{currentCar.name}</h3>
+                    <p className="text-lg text-gray-300">{currentCar.year} • {currentCar.manufacturer}</p>
+                    <div className="mt-4 flex justify-center space-x-4 text-sm">
+                      <span className="bg-red-600/80 px-3 py-1 rounded backdrop-blur-sm">{currentCar.power}HP</span>
+                      <span className="bg-yellow-600/80 px-3 py-1 rounded backdrop-blur-sm">{currentCar.topSpeed}km/h</span>
+                    </div>
                   </div>
                 </div>
               </div>

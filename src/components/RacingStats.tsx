@@ -38,7 +38,7 @@ function AnimatedCounter({ end, duration = 2000 }: { end: number, duration?: num
 export function RacingStats() {
   return (
     <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-6 border border-border hover:border-red-500/50 transition-all duration-300">
-      <h2 className="text-xl font-bold text-white mb-6 racing-subtitle">RACING STATISTICS</h2>
+      <h2 className="text-xl font-bold mb-6 racing-subtitle">RACING STATISTICS</h2>
 
       <div className="space-y-6">
         {stats.map((stat, index) => (
@@ -51,7 +51,7 @@ export function RacingStats() {
             </div>
 
             <div className="text-right">
-              <div className="text-2xl font-black text-white racing-title">
+              <div className="text-2xl font-black racing-title">
                 <AnimatedCounter end={parseInt(stat.value.replace('.', ''))} />
                 {stat.value.includes('.') && <span>.{stat.value.split('.')[1]}</span>}
               </div>
